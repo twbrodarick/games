@@ -16,7 +16,28 @@
      "name": "stdin",
      "output_type": "stream",
      "text": [
-      "Do you want to play?  YES\n"
+      "Do you want to play?  yes\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Great. Let's go!\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "What is the smallest recognized country by area and population?  vatican\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Correct. Nice job! \n"
      ]
     }
    ],
@@ -70,6 +91,7 @@
     "    print(\"You got \", score, \" question correct! Great effort, nerd!\")\n",
     "else:\n",
     "    print(\"You got \", score, \" questions correct! Great effort, nerd!\")\n",
+    "    \n",
     "print(\"You scored \" + str(score/5*100) +'%' \"! Which is nice...\")"
    ]
   },
