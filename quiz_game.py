@@ -4,7 +4,22 @@
    "cell_type": "code",
    "execution_count": null,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Welcome to my country quiz!\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Do you want to play?  YES\n"
+     ]
+    }
+   ],
    "source": [
     "print('Welcome to my country quiz!')\n",
     "playing = input('Do you want to play? ')\n",
@@ -12,8 +27,8 @@
     "    quit()\n",
     "    \n",
     "print('Great. Let\\'s go!')\n",
-    "score = 1\n",
-    "#setting score = 0 lowered score by 1 incorrectly. Not sure why\n",
+    "score = 0\n",
+    "\n",
     "\n",
     "answer = input('What is the smallest recognized country by area and population? ')\n",
     "if answer.lower() == 'vatican' or answer.lower() == 'vatican city':\n",
@@ -23,11 +38,12 @@
     "    print('Incorrect. the Vatican City State is completely surrounded by Rome, Italy. ')\n",
     "          \n",
     "answer = input('The most recent country to remove the British monarch as its head of state is? ')\n",
-    "if answer.lower == 'barbados':\n",
+    "if answer.lower() == 'barbados':\n",
     "    print('Correct. You stay on top of current events! ')\n",
+    "    score += 1\n",
     "else:\n",
     "    print('Incorrect. Barbados officially became a republic on November 30, 2021. ')\n",
-    "    score += 1\n",
+    "    \n",
     "          \n",
     "answer = input('Luxembourg\\'s flag features three horizontal strips of red white and blue, similar to what other European nation\\'s flag? ')\n",
     "if answer.lower() == 'netherlands' or answer.lower() == 'holland':\n",
@@ -49,8 +65,11 @@
     "    score += 1\n",
     "else:\n",
     "    print('Incorrect. The answer is Russia. Do you own a map? ')\n",
-    "          \n",
-    "print(\"You got \" + str(score) + \" questions correct! Great effort, nerd!\")\n",
+    "\n",
+    "if score == 1:\n",
+    "    print(\"You got \", score, \" question correct! Great effort, nerd!\")\n",
+    "else:\n",
+    "    print(\"You got \", score, \" questions correct! Great effort, nerd!\")\n",
     "print(\"You scored \" + str(score/5*100) +'%' \"! Which is nice...\")"
    ]
   },
